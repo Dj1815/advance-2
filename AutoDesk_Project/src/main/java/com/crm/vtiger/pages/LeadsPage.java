@@ -74,7 +74,7 @@ public class LeadsPage extends BasePage {
 		searchTextField.sendKeys(expectedLead);
 		webUtility.selectOption(leadsSearchDropDown, lastName);
 		webUtility.waitAndClick(searchNowButton);
-		Thread.sleep(2-000);
+		Thread.sleep(2000);
 		webUtility.waitAndClick(lastNameSelection);
 	}
 

@@ -3,19 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.crm.vtigerTests.Leads.TL_26_ConvertLeadToOpertunitiesBySelectingOrganisationAndContactChekboxsAndFillAllTheMandatoryFields">
+      <class name="com.crm.vtigerTests.Leads.TL_26_ConvertLeadToOrganization">
         <methods>
           <include name="tearDown"/>
+          <include name="convertLead"/>
           <include name="configAS"/>
           <include name="configBT"/>
           <include name="configAC"/>
-          <include name="convertLead"/>
           <include name="configAT"/>
           <include name="configBS"/>
           <include name="configBC"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.crm.vtigerTests.Leads.TL_26_ConvertLeadToOpertunitiesBySelectingOrganisationAndContactChekboxsAndFillAllTheMandatoryFields -->
+      </class> <!-- com.crm.vtigerTests.Leads.TL_26_ConvertLeadToOrganization -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

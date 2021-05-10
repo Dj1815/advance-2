@@ -190,11 +190,12 @@ public class WebdriverUtility {
 	}
 	
 	
-	public void takeScreenShot(WebDriver driver,String screenShotName) throws IOException {
+	public String takeScreenShot(WebDriver driver,String screenShotName) throws IOException {
 		TakesScreenshot ts=(TakesScreenshot) driver;
 		File src=ts.getScreenshotAs(OutputType.FILE);
 		File dest=new File("./screenshot/"+screenShotName+".PNG");
 		Files.copy(src, dest);
+		return screenShotName;
 	}
 
 	

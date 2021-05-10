@@ -3,6 +3,7 @@ package com.crm.vtiger.genericUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -79,6 +80,11 @@ public class BaseClass {
 	@AfterSuite(groups = { "smokeTest", "regressionTest" })
 	public void configAS() {
 		// close DB connection
+	}
+
+	public void onFinish(ITestContext arg0) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

@@ -27,9 +27,9 @@ public class JavaUtility {
 	 * @author rohit
 	 * @return current date
 	 */
-	public String getCurrentSystemDate() {
+	public static String getCurrentSystemDate() {
 		Date date=new Date();
 		String currentDate=date.toString();
-		return currentDate;
+		return currentDate.replace(" ", "_").replace(":", "_");
 	}
 }

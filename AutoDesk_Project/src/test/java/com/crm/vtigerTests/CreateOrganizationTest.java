@@ -8,6 +8,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
+import com.crm.vtiger.genericUtils.JavaUtility;
+
 public class CreateOrganizationTest {
 	
 	@Test
@@ -28,10 +30,11 @@ public class CreateOrganizationTest {
 		driver.findElement(By.id("submitButton")).click();
 		
 		//step3:navigate to organization
+		JavaUtility util=new JavaUtility();
 		
 		driver.findElement(By.linkText("Organizations")).click();
 		driver.findElement(By.xpath("//img[@alt='Create Organization...']")).click();
-		driver.findElement(By.name("accountname")).sendKeys("TYSS02");
+		driver.findElement(By.name("accountname")).sendKeys("Jenis"+util.getRandomData());
 		
 		//saving the organization
 		

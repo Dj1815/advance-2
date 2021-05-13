@@ -10,6 +10,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
+import com.crm.vtiger.genericUtils.JavaUtility;
+
 public class CreateOrganisationWithIndustry {
 	
 	@Test
@@ -32,8 +34,9 @@ public class CreateOrganisationWithIndustry {
 		driver.findElement(By.linkText("Organizations")).click();
 		
 		//Step 4: create Organization
+		JavaUtility util=new JavaUtility();
 		driver.findElement(By.xpath("//img[@title='Create Organization...']")).click();
-		driver.findElement(By.name("accountname")).sendKeys("TYSS09");
+		driver.findElement(By.name("accountname")).sendKeys("Omega"+util.getRandomData());
 		
 		//Step 5: click on Industry
 		WebElement selection = driver.findElement(By.name("industry"));
